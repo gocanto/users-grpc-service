@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "github.com/gocanto/gRPC-Playground";
+
+service UserService {
+  rpc CreateUser (NewUserRequest) returns (User) {}
+}
+
+message NewUserRequest {
+  string name = 1;
+  int32 age = 2;
+}
+
+message User {
+  int32 id = 1;
+  string name = 2;
+  int32 age = 3;
+}
