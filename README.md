@@ -2,7 +2,26 @@
 
 Simple users gRPC service.
 
-### Commands
+### How can I test the code?
+
+First, you would need to clone this repository. Like so: 
+
+```bash
+git@github.com:gocanto/users-grpc-service.git
+```
+
+After you have done this, you have to position yourself at the project root folder from
+you CLI `cd users-grpc-service` from two different tabs or CLI windows.
+
+Once you are in the project, you would have to type the following commands.
+
+- From one of your opened tab/window, you need to type `go run server/server.go` for you to have 
+the given gRPC server running. After doing so, you would be able to see the following output
+`Server listing at [::]:50051`
+- Then, you need to position yourself withing your second tap/window and type the following.
+`go run client/client.go` for you to make clients petitions to the running server.
+
+### Proto generation commands
 
 Generate proto files: 
 ``protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative user/user.proto``
