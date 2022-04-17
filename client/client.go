@@ -4,6 +4,7 @@ import (
 	pb "github.com/gocanto/gRPC-Playground/user"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 	"log"
 	"time"
 )
@@ -13,7 +14,7 @@ const (
 )
 
 func main() {
-	conn, err := grpc.Dial(address, grpc.WithInsecure(), grpc.WithBlock())
+	conn, err := grpc.Dial(address, grpc.WithTransportCredentials(insecure.NewCredentials()), grpc.WithBlock())
 
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)
