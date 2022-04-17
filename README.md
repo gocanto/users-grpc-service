@@ -2,6 +2,14 @@
 
 Simple users gRPC service.
 
+### Prerequisites
+
+You would have to go through the following [prerequisites](https://grpc.io/docs/languages/go/quickstart/#prerequisites) 
+in order for you to try this code.
+
+
+
+
 ### How can I test the code?
 
 First, you would need to clone this repository. Like so: 
